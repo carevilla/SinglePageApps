@@ -5,40 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
+
+<style>
+    .main-container {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: hsl(0, 0%, 15%);
+        border-radius: 15px;
+    }
+
+    .keys {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        
+    }
+    button {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: none;
+        background-color: hsl(0, 0%, 30%);
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
 <body>
     <h1>Calculator</h1>
 
     <div class="main-container">
-        <header>Use Me</header>
-        <input type="text">
-        <div class="input-section">
-            <button>AC</button>
-            <button>+/-</button>
-            <button>%</button>
-            <button>/</button>
-
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>X</button>
-
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
-
-            <button>A</button>
-            <button>0</button>
-            <button>.</button>
-            <button>=</button>
-
+        <input id="display-screen" readonly >
+            <div class="keys">
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('*')">*</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="clearDisplay()">CC</button>
+            </div>
         </div>
-        
     </div>
+
+    
+
+       
+        
+    
 </body>
 </html>
