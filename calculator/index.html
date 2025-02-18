@@ -7,15 +7,32 @@
 </head>
 
 <style>
+
+    body {
+        margin: 0;
+        height: 100vh;
+        background-color: hsl(0, 0%, 95%);
+    }
+
+    h1{
+        text-decoration: line-through;
+        align-items: center;
+        display: flex;
+    }
+
     .main-container {
         font-family: Arial, Helvetica, sans-serif;
         background-color: hsl(0, 0%, 15%);
         border-radius: 15px;
+        max-width: 500px;
+        overflow: hidden;
     }
 
     .keys {
         display: grid;
         grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+        padding: 25px;
         
     }
     button {
@@ -28,6 +45,14 @@
         font-size: 3rem;
         font-weight: bold;
         cursor: pointer;
+    }
+
+    button:hover{
+        background-color: hsl(0, 0%, 40%);
+    }
+
+    button:active{
+        background-color: hsl(0, 0%, 50%);
     }
 </style>
 <body>
@@ -56,11 +81,7 @@
             </div>
         </div>
     </div>
-
-    
-
-       
-        
+ 
     
 </body>
 </html>
